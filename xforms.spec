@@ -3,8 +3,8 @@ Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
 Summary(pt_BR):	Biblioteca de Widgets para o X
 Name:		xforms
 Version:	0.89
-Release:	4
-License:	noncommercial distributable (see Copyright)
+Release:	5
+License:	non-commercial
 Group:		X11/Libraries
 Source0:	bxform-089-glibc2.1-x86.tgz
 Source1:	bxform-089-glibc2.1-alpha.tgz
@@ -155,8 +155,6 @@ install FORMS/glcanvas.c $RPM_BUILD_ROOT/usr/src/examples/xforms
 
 install DESIGN/fdesign $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf FORMS/Readme Bugs Changes Copyright Readme
-
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -165,7 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc forms_sngl.ps.gz {Bugs,Changes,Copyright,Readme}.gz
+%doc forms_sngl.ps.gz Bugs Changes Copyright Readme
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %{_mandir}/man5/*
 
@@ -180,7 +178,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files demos
 %defattr(644,root,root,755)
-%doc FORMS/Readme.gz
+%doc FORMS/Readme
 %attr(-,root,root) /usr/src/examples/xforms
 
 %files -n fdesign
