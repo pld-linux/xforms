@@ -99,10 +99,10 @@ make	install \
 	HEADER_DIR=$RPM_BUILD_ROOT/usr/X11R6/include
 ln -sf libforms.so.%{version} $RPM_BUILD_ROOT/usr/X11R6/lib/libforms.so
 
-cp -a contrib $RPM_BUILD_ROOT/usr/lib/xforms
-install mkconfig.h $RPM_BUILD_ROOT/usr/lib/xforms
-cp -a DEMOS $RPM_BUILD_ROOT/usr/lib/xforms
-install FORMS/gl.c $RPM_BUILD_ROOT/usr/lib/xforms
+cp -a contrib $RPM_BUILD_ROOT%{_libdir}/xforms
+install mkconfig.h $RPM_BUILD_ROOT%{_libdir}/xforms
+cp -a DEMOS $RPM_BUILD_ROOT%{_libdir}/xforms
+install FORMS/gl.c $RPM_BUILD_ROOT%{_libdir}/xforms
 
 install %{SOURCE10} $RPM_BUILD_ROOT/etc/X11/wmconfig/fdesign
 install DESIGN/fdesign $RPM_BUILD_ROOT/usr/X11R6/bin
@@ -130,7 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 %files demos
 %defattr(644, root, root, 755)
 %doc FORMS/Readme
-%attr(-, root, root) /usr/lib/xforms/
+%attr(-, root, root) %{_libdir}/xforms/
 
 %files -n fdesign
 %attr(644, root, root) %config(missingok) /etc/X11/wmconfig/fdesign
