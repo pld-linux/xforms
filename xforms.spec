@@ -82,6 +82,7 @@ Pliki nag³ówkowe i dokumentacja bibliteki XForms.
 %package static
 Summary:	xforms static libraries
 Summary(pl):	Biblioteki statyczne XForms
+Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Libraries
 Group(es):	X11/Desarrollo/Bibliotecas
 Group(fr):	X11/Development/Librairies
