@@ -5,13 +5,6 @@ Version:	0.89
 Release:	3
 License:	noncommercial distributable (see Copyright)
 Group:		X11/Libraries
-Group(de):	X11/Libraries
-Group(es):	X11/Bibliotecas
-Group(fr):	X11/Librairies
-Group(pl):	X11/Biblioteki
-Group(pt_BR):	X11/Bibliotecas
-Group(ru):	X11/Библиотеки
-Group(uk):	X11/Б╕бл╕отеки
 Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz
 Source2:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-alpha/bxform-089-glibc2.1-alpha.tgz
 Source3:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-sparc/bxform-089-glibc2.1-sparc.tgz
@@ -44,13 +37,6 @@ pozwala na szybkie i Ёatwe tworzenie X-aplikacji.
 Summary:	xforms library demo programs
 Summary(pl):	programy demo u©ywaj╠ce biblioteki XForms
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description demos
@@ -63,13 +49,6 @@ Dema u©ywaj╠ce biblioteki XForms.
 Summary:	xforms - header files and development documentation
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja bibliteki XForms
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Requires:	XFree86-devel
 
@@ -83,13 +62,6 @@ Pliki nagЁСwkowe i dokumentacja bibliteki XForms.
 Summary:	xforms static libraries
 Summary(pl):	Biblioteki statyczne XForms
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -102,9 +74,6 @@ Biblioteki statyczne XForms.
 Summary:	fdesign - Forms Library User Interface Designer
 Summary(pl):	fdesign - Projektant GUI
 Group:		X11/Development/Tools
-Group(de):	X11/Entwicklung/Werkzeuge
-Group(fr):	X11/Development/Outils
-Group(pl):	X11/Programowanie/NarzЙdzia
 Requires:	%{name} = %{version}
 
 %description -n fdesign
