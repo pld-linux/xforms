@@ -154,7 +154,7 @@ pomoc± edytora WYSIWYG pozwalaj±cego u¿ytkownikowi na bezpo¶rednie
 manipulowanie ró¿nymi obiektami, takimi jak przyciski, suwaki, menu
 itp. Po skonstruowaniu odpowiadaj±cego UI u¿ytkownik mo¿e zapisaæ
 zaprojektowany interfejs do zewnêtrznego pliku zawieraj±cego czê¶æ
-kodu programu. Po skompilowaniu i zlinkowaniu z bibliotek± XForms,
+kodu programu. Po skompilowaniu i skonsolidowaniu z bibliotek± XForms,
 uruchomiony program utworzy (lub wydrukuje w przypadku wyj¶cia do
 PostScriptu) dok³adnie ten sam interfejs, który by³ widoczny w
 fdesign.
