@@ -4,10 +4,14 @@ Name:		xforms
 Version:	0.89
 Release:	2
 License:	noncommercial distributable (see Copyright)
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
+Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
+Group(fr):	Librairies
+Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz
 Source2:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-alpha/bxform-089-glibc2.1-alpha.tgz
 Source3:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-sparc/bxform-089-glibc2.1-sparc.tgz
@@ -40,8 +44,12 @@ Summary:	xforms library demo programs
 Summary(pl):	programy demo u©ywaj╠ce biblioteki XForms
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description demos
@@ -55,8 +63,12 @@ Summary:	xforms - header files and development documentation
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja bibliteki XForms
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -70,8 +82,12 @@ Summary:	xforms static libraries
 Summary(pl):	Biblioteki statyczne XForms
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
