@@ -84,7 +84,7 @@ cp %{SOURCE3} .
 %patch1 -p1
 
 %build
-make demo CCFLAG=$RPM_OPT_FLAGS; make clean
+make demo CCFLAG="$RPM_OPT_FLAGS"; make clean
 rm -f DEMOS/*.orig
 
 %install
