@@ -37,7 +37,7 @@ can easily be created and added to the library.
 
 %description -l pl
 XForms jest zbiorem narzêdzi bazuj±cym na Xlib do tworzenia GUI dla
-Systemów X Windows. Jego zalety to bogata ilo¶æ obiektów takich jak
+Systemów X Window. Jego zalety to bogata ilo¶æ obiektów takich jak
 przyciski, menu itp. zintegrowane w prosty i efektywny model, który
 pozwala na szybkie i ³atwe tworzenie X-aplikacji.
 
