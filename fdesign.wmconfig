@@ -1,4 +1,0 @@
-fdesign name "Fdesign - xforms GUI builder"
-fdesign description "Fdesign - a user interface builder for xforms"
-fdesign exec "fdesign &"
-fdesign group "Development/Visual"

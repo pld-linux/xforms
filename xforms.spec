@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
 Summary(pt_BR):	Biblioteca de Widgets para o X
 Name:		xforms
 Version:	1.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/%{name}-%{version}-release.tgz
@@ -18,6 +18,7 @@ BuildRequires:	libtiff-devel
 # according to warning in README - old headers may break it
 BuildConflicts:	xforms-devel < 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	libforms1
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -48,6 +49,7 @@ Summary(pt_BR):	Arquivos de cabeçalho para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	XFree86-devel
+Obsoletes:	libforms1-devel
 
 %description devel
 XForms - header files and development documentation.
@@ -65,6 +67,7 @@ Summary(pl):	Biblioteki statyczne XForms
 Summary(pt_BR):	Biblioteca estática para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
+Obsoletes:	libforms1-static-devel
 
 %description static
 XForms static libraries.
@@ -188,6 +191,9 @@ rm -rf $RPM_BUILD_ROOT
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
+%post   GL -p /sbin/ldconfig
+%postun GL -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc 00README Changes Copyright
@@ -200,8 +206,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc forms_sngl.ps.gz
 %attr(755,root,root) %{_libdir}/libforms.so
 %attr(755,root,root) %{_libdir}/libflimage.so
-%{_includedir}/X11/forms.h
-%{_includedir}/X11/flimage.h
+%{_includedir}/forms.h
+%{_includedir}/flimage.h
 
 %files static
 %defattr(644,root,root,755)
@@ -215,7 +221,7 @@ rm -rf $RPM_BUILD_ROOT
 %files GL-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libformsGL.so
-%{_includedir}/X11/glcanvas.h
+%{_includedir}/glcanvas.h
 
 %files GL-static
 %defattr(644,root,root,755)
