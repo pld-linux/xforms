@@ -1,8 +1,9 @@
 Summary:	Graphical user interface toolkit for X Window Systems
 Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
+Summary(pt_BR):	Biblioteca de Widgets para o X
 Name:		xforms
 Version:	0.89
-Release:	3
+Release:	4
 License:	noncommercial distributable (see Copyright)
 Group:		X11/Libraries
 Source0:	bxform-089-glibc2.1-x86.tgz
@@ -34,6 +35,9 @@ Systemów X Windows. Jego zalety to bogata ilo¶æ obiektów takich jak
 przyciski, menu itp. zintegrowane w prosty i efektywny model, który
 pozwala na szybkie i ³atwe tworzenie X-aplikacji.
 
+%description -l pt_BR
+XForm é uma biblioteca de widgets para o X.
+
 %package demos
 Summary:	xforms library demo programs
 Summary(pl):	programy demo u¿ywaj±ce biblioteki XForms
@@ -49,6 +53,7 @@ Dema u¿ywaj±ce biblioteki XForms.
 %package devel
 Summary:	xforms - header files and development documentation
 Summary(pl):	Pliki nag³ówkowe i dokumentacja bibliteki XForms
+Summary(pt_BR):	Arquivos de cabeçalho para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	XFree86-devel
@@ -59,9 +64,14 @@ Xforms - header files and development documentation.
 %description devel -l pl
 Pliki nag³ówkowe i dokumentacja bibliteki XForms.
 
+%description devel -l pt_BR
+Este pacote contém arquivos de cabeçalho e ferramentas para
+desenvolvedores XForms.
+
 %package static
 Summary:	xforms static libraries
 Summary(pl):	Biblioteki statyczne XForms
+Summary(pt_BR):	Biblioteca estática para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
 
@@ -70,6 +80,9 @@ Xforms static libraries.
 
 %description static -l pl
 Biblioteki statyczne XForms.
+
+%description static -l pt_BR
+Este pacote contém a versão estática da biblioteca XForms.
 
 %package -n fdesign
 Summary:	fdesign - Forms Library User Interface Designer
