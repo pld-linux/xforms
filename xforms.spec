@@ -12,7 +12,7 @@ Source10:	fdesign.wmconfig
 Patch0:		bxform-mkconfig.patch
 Patch1:		bxform-config.patch
 URL:		http://bragg.phys.uwm.edu/xforms/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix	/usr/X11R6
 %define		_mandir	%{_prefix}/man
