@@ -2,22 +2,23 @@ Summary:	Graphical user interface toolkit for X Window Systems
 Summary(pl):	NarzЙdzia do tworzenia GUI dla X Window
 Name:		xforms
 Version:	0.89
-Release:	2
+Release:	3
 License:	noncommercial distributable (see Copyright)
-Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
+Group:		X11/Libraries
+Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
+Group(fr):	X11/Librairies
+Group(pl):	X11/Biblioteki
+Group(pt_BR):	X11/Bibliotecas
+Group(ru):	X11/Библиотеки
+Group(uk):	X11/Б╕бл╕отеки
 Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz
 Source2:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-alpha/bxform-089-glibc2.1-alpha.tgz
 Source3:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-sparc/bxform-089-glibc2.1-sparc.tgz
 Source4:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 Patch0:		bxform-mkconfig.patch
 Patch1:		bxform-config.patch
+BuildRequires:	XFree86-devel
 Exclusivearch:	%{ix86} alpha sparc sparc64
 URL:		http://world.std.com/~xforms/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,14 +43,14 @@ pozwala na szybkie i Ёatwe tworzenie X-aplikacji.
 %package demos
 Summary:	xforms library demo programs
 Summary(pl):	programy demo u©ywaj╠ce biblioteki XForms
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(es):	X11/Desarrollo/Bibliotecas
+Group(fr):	X11/Development/Librairies
+Group(pl):	X11/Programowanie/Biblioteki
+Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(ru):	X11/Разработка/Библиотеки
+Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description demos
@@ -61,15 +62,16 @@ Dema u©ywaj╠ce biblioteki XForms.
 %package devel
 Summary:	xforms - header files and development documentation
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja bibliteki XForms
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(es):	X11/Desarrollo/Bibliotecas
+Group(fr):	X11/Development/Librairies
+Group(pl):	X11/Programowanie/Biblioteki
+Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(ru):	X11/Разработка/Библиотеки
+Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
+Requires:	XFree86-devel
 
 %description devel
 Xforms - header files and development documentation.
@@ -80,14 +82,13 @@ Pliki nagЁСwkowe i dokumentacja bibliteki XForms.
 %package static
 Summary:	xforms static libraries
 Summary(pl):	Biblioteki statyczne XForms
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
+Group(de):	X11/Entwicklung/Libraries
+Group(es):	X11/Desarrollo/Bibliotecas
+Group(fr):	X11/Development/Librairies
+Group(pl):	X11/Programowanie/Biblioteki
+Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(ru):	X11/Разработка/Библиотеки
+Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -99,9 +100,10 @@ Biblioteki statyczne XForms.
 %package -n fdesign
 Summary:	fdesign - Forms Library User Interface Designer
 Summary(pl):	fdesign - Projektant GUI
-Group:		Development/Building
-Group(de):	Entwicklung/Bauen
-Group(pl):	Programowanie/Budowanie
+Group:		X11/Development/Tools
+Group(de):	X11/Entwicklung/Werkzeuge
+Group(fr):	X11/Development/Outils
+Group(pl):	X11/Programowanie/NarzЙdzia
 Requires:	%{name} = %{version}
 
 %description -n fdesign
