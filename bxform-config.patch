@@ -1,0 +1,11 @@
+--- xforms/DEMOS/demo.c.config	Wed Nov 19 17:04:40 1997
++++ xforms/DEMOS/demo.c	Wed Nov 19 17:04:56 1997
+@@ -51,7 +51,7 @@
+ 
+     create_the_forms();
+ 
+-    if (!load_the_menu("demo.menu"))
++    if (!load_the_menu("./demo.menu"))
+ 	exit(-1);
+ 
+     push_menu("@main");
