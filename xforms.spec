@@ -12,7 +12,7 @@ Source4:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 Patch0:		bxform-mkconfig.patch
 Patch1:		bxform-config.patch
 BuildRequires:	XFree86-devel
-Exclusivearch:	%{ix86} alpha sparc sparc64
+Exclusivearch:	%{ix86} alpha sparc sparc64 ppc
 URL:		http://world.std.com/~xforms/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
