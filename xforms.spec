@@ -190,10 +190,10 @@ find $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version} -type f -perm -0700 | \
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%post   GL -p /sbin/ldconfig
+%post	GL -p /sbin/ldconfig
 %postun GL -p /sbin/ldconfig
 
 %files
