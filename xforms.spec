@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
 Name:		xforms
 Version:	0.89
 Release:	2
-Copyright:	noncommercial distributable (see Copyright)
+License:	noncommercial distributable (see Copyright)
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
