@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
 Summary(pt_BR):	Biblioteca de Widgets para o X
 Name:		xforms
 Version:	1.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/%{name}-%{version}-release.tgz
@@ -206,8 +206,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc forms_sngl.ps.gz
 %attr(755,root,root) %{_libdir}/libforms.so
 %attr(755,root,root) %{_libdir}/libflimage.so
-%{_includedir}/X11/forms.h
-%{_includedir}/X11/flimage.h
+%{_includedir}/forms.h
+%{_includedir}/flimage.h
 
 %files static
 %defattr(644,root,root,755)
@@ -221,7 +221,7 @@ rm -rf $RPM_BUILD_ROOT
 %files GL-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libformsGL.so
-%{_includedir}/X11/glcanvas.h
+%{_includedir}/glcanvas.h
 
 %files GL-static
 %defattr(644,root,root,755)
