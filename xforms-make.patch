@@ -37,3 +37,33 @@
  
  #define NonstandardXpm NO
  
+--- xforms-1.0-release/lib/Imakefile.orig	Tue May  6 00:10:37 2003
++++ xforms-1.0-release/lib/Imakefile	Tue May  6 00:10:37 2003
+@@ -151,7 +151,6 @@
+     CDEBUGFLAGS = LibraryCDebugFlags
+ #else
+ #define SoRev XFORMSLIBREV
+-#define IncSubdir X11
+ #include <Library.tmpl>
+ #endif
+ 
+--- xforms-1.0-release/gl/Imakefile.orig	Tue May  6 00:32:37 2003
++++ xforms-1.0-release/gl/Imakefile	Tue May  6 00:32:37 2003
+@@ -72,7 +72,6 @@
+     CDEBUGFLAGS = LibraryCDebugFlags
+ #else
+ #define SoRev XFORMSLIBREV
+-#define IncSubdir X11
+ #include <Library.tmpl>
+ #endif
+ 
+--- xforms-1.0-release/image/Imakefile.orig	Tue May  6 00:32:24 2003
++++ xforms-1.0-release/image/Imakefile	Tue May  6 00:32:24 2003
+@@ -102,7 +102,6 @@
+     CDEBUGFLAGS = LibraryCDebugFlags
+ #else
+ #define SoRev XFORMSLIBREV
+-#define IncSubdir X11
+ #include <Library.tmpl>
+ #endif
+ 
