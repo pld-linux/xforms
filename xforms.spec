@@ -117,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644, root, root, 755)
 %doc forms_sngl.ps.gz Bugs Changes Copyright Readme
 %attr(755, root, root) /usr/X11R6/lib/lib*.so.*.*
-%attr(644, root,  man) /usr/X11R6/man/man5/*
+/usr/X11R6/man/man5/*
 
 %files devel
 %defattr(644, root, root, 755)
@@ -135,7 +135,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -n fdesign
 %attr(644, root, root) %config(missingok) /etc/X11/wmconfig/fdesign
 %attr(755, root, root) /usr/X11R6/bin/*
-%attr(644, root,  man) /usr/X11R6/man/man1/*
+/usr/X11R6/man/man1/*
 
 %changelog
 * Fri Sep 25 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
