@@ -114,27 +114,27 @@ install DESIGN/fdesign $RPM_BUILD_ROOT/usr/X11R6/bin
 rm -rf $RPM_BUILD_ROOT
 
 %files 
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc forms_sngl.ps.gz Bugs Changes Copyright Readme
-%attr(755, root, root) /usr/X11R6/lib/lib*.so.*.*
+%attr(755,root,root) /usr/X11R6/lib/lib*.so.*.*
 /usr/X11R6/man/man5/*
 
 %files devel
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 /usr/X11R6/lib/lib*.so
 /usr/X11R6/include/*.h
 
 %files static
-%attr(644, root, root) /usr/X11R6/lib/lib*.a
+%attr(644,root,root) /usr/X11R6/lib/lib*.a
 
 %files demos
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc FORMS/Readme
-%attr(-, root, root) %{_libdir}/xforms/
+%attr(-,root,root) %{_libdir}/xforms/
 
 %files -n fdesign
-%attr(644, root, root) %config(missingok) /etc/X11/wmconfig/fdesign
-%attr(755, root, root) /usr/X11R6/bin/*
+%attr(644,root,root) %config(missingok) /etc/X11/wmconfig/fdesign
+%attr(755,root,root) /usr/X11R6/bin/*
 /usr/X11R6/man/man1/*
 
 %changelog
