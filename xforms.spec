@@ -105,7 +105,7 @@ manipulacje obiektami itp.
 %endif
 
 %ifarch alpha
-%setup -q -T-n xforms -b 2
+%setup -q -T -n xforms -b 2
 %endif
 
 %ifarch sparc sparc64
