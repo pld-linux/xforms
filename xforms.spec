@@ -42,7 +42,7 @@ Requires:	%{name} = %{version}
 %description demos
 Demos using the XForms library.
 
-%description -l pl demos
+%description demos -l pl
 Dema u¿ywaj±ce biblioteki XForms.
 
 %package devel
@@ -55,7 +55,7 @@ Requires:	XFree86-devel
 %description devel
 Xforms - header files and development documentation.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumentacja bibliteki XForms.
 
 %package static
@@ -67,7 +67,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Xforms static libraries.
 
-%description -l pl static
+%description static -l pl
 Biblioteki statyczne XForms.
 
 %package -n fdesign
@@ -87,7 +87,7 @@ executed, the generated code would, at run time (or print time for
 PostScript output), construct the exact same interfaces as those seen
 within fdesign.
 
-%description -l pl -n fdesign
+%description -n fdesign -l pl
 fdesign to GUI pomagaj±ce stworzyæ graficzny interfejs u¿ytkownika za
 pomoc± edytora WYSIWYG pozwalaj±cego u¿ytkownikowi na bezpo¶rednie
 manipulacje obiektami itp.
@@ -145,7 +145,7 @@ gzip -9nf FORMS/Readme Bugs Changes Copyright Readme
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(644,root,root,755)
 %doc forms_sngl.ps.gz {Bugs,Changes,Copyright,Readme}.gz
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
