@@ -11,7 +11,7 @@ Source3:     ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 Source10:    fdesign.wmconfig
 Patch0:      bxform-088-mkconfig.patch
 Patch1:      bxform-088-1-config.patch
-BuildRoot:   /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 URL:         http://bragg.phys.uwm.edu/xforms/
 
 %ifarch alpha
