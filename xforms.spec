@@ -1,7 +1,7 @@
 Summary:	Graphical user interface toolkit for X Window Systems
 Name:		xforms
 Version:	0.88
-Release:	7
+Release:	8
 Copyright:	noncommercial distributable (see Copyright)
 Group:		Development/Libraries
 Source0:	ftp://einstein.phys.uwm.edu/pub/xforms/linux/elf/bxform-088-glibc.tgz
@@ -97,6 +97,9 @@ make install \
 	MAN5_DIR=$RPM_BUILD_ROOT%{_mandir}/man5 \
 	HEADER_DIR=$RPM_BUILD_ROOT%{_includedir}
 
+rm -rf $RPM_BUILD_ROOT%{_mandir}/man5/forms.5
+echo ".so xforms.5" > $RPM_BUILD_ROOT%{_mandir}/man5/forms.5
+
 ln -sf libforms.so.%{version} $RPM_BUILD_ROOT%{_libdir}/libforms.so
 
 cp -a contrib $RPM_BUILD_ROOT/usr/src/examples/xforms
@@ -109,7 +112,8 @@ install DESIGN/fdesign $RPM_BUILD_ROOT%{_bindir}
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
-gzip -9nf FORMS/Readme Bugs Changes Copyright Readme
+gzip -9nf FORMS/Readme Bugs Changes Copyright Readme \
+	$RPM_BUILD_ROOT%{_mandir}/man*/*
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
