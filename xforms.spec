@@ -1,18 +1,18 @@
 Summary:	Graphical user interface toolkit for X Window Systems
 Name:		xforms
-Version:	0.88
-Release:	8
+Version:	0.89
+Release:	1
 Copyright:	noncommercial distributable (see Copyright)
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	ftp://einstein.phys.uwm.edu/pub/xforms/linux/elf/bxform-088-glibc.tgz
-Source1:	ftp://einstein.phys.uwm.edu/pub/xforms/linux-sparc/bxform-088.sparc.tgz
-Source2:	ftp://einstein.phys.uwm.edu/pub/xforms/linux-alpha/elf/bxform-088.alpha.tgz
+Source0:	ftp://einstein.phys.uwm.edu/pub/xforms/linux/elf/bxform-089-glibc2.1.tgz
+Source2:	ftp://einstein.phys.uwm.edu/pub/xforms/linux-alpha/elf/bxform-089-glibc2.1.alpha.tgz
 Source3:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 Source10:	fdesign.wmconfig
 Patch0:		bxform-mkconfig.patch
 Patch1:		bxform-config.patch
+Exclusivearch:	%{ix86} alpha
 URL:		http://bragg.phys.uwm.edu/xforms/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,10 +79,6 @@ within fdesign.
 %setup -q -T -n xforms -b 0
 %endif
 
-%ifarch sparc sparc64
-%setup -q -T-n xforms -b 1
-%endif
-
 %ifarch alpha
 %setup -q -T-n xforms -b 2
 %endif
@@ -93,7 +89,7 @@ cp %{SOURCE3} .
 %patch1 -p1
 
 %build
-%{__make} demo CCFLAG="$RPM_OPT_FLAGS"; make clean
+make demo CCFLAG="$RPM_OPT_FLAGS"; make clean
 rm -f DEMOS/*.orig
 
 %install
@@ -101,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{etc/X11/wmconfig,usr/src/examples/xforms} \
 	$RPM_BUILD_ROOT{%{_libdir},%{_bindir},%{_includedir},%{_mandir}/man{1,5}}
 
-%{__make} install \
+make install \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	LIB_DIR=$RPM_BUILD_ROOT%{_libdir} \
 	MAN1_DIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
@@ -116,7 +112,7 @@ ln -sf libforms.so.%{version} $RPM_BUILD_ROOT%{_libdir}/libforms.so
 cp -a contrib $RPM_BUILD_ROOT/usr/src/examples/xforms
 install mkconfig.h $RPM_BUILD_ROOT/usr/src/examples/xforms
 cp -a DEMOS $RPM_BUILD_ROOT/usr/src/examples/xforms
-install FORMS/gl.c $RPM_BUILD_ROOT/usr/src/examples/xforms
+install FORMS/glcanvas.c $RPM_BUILD_ROOT/usr/src/examples/xforms
 
 install %{SOURCE10} $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/fdesign
 install DESIGN/fdesign $RPM_BUILD_ROOT%{_bindir}
