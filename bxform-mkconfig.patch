@@ -1,0 +1,20 @@
+--- xforms/mkconfig.h.i386	Wed Nov 19 17:01:50 1997
++++ xforms/mkconfig.h	Wed Nov 19 17:02:57 1997
+@@ -13,7 +13,7 @@
+ 
+ # where the library should be installed
+ 
+-LIB_TOPDIR=/usr
++LIB_TOPDIR=/usr/X11R6
+ 
+ LIB_DIR=$(LIB_TOPDIR)/lib
+ LIBMODE=644
+@@ -21,7 +21,7 @@
+ HEADER_DIR=$(LIB_TOPDIR)/include
+ HEADERMODE=644
+ 
+-BIN_DIR=/usr/local/bin
++BIN_DIR=/usr/X11R6/bin
+ BINMODE=711
+ 
+ MAN5_DIR=$(LIB_TOPDIR)/man/man5
