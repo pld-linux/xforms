@@ -93,7 +93,7 @@ cp %{SOURCE3} .
 %patch1 -p1
 
 %build
-make demo CCFLAG="$RPM_OPT_FLAGS"; make clean
+%{__make} demo CCFLAG="$RPM_OPT_FLAGS"; make clean
 rm -f DEMOS/*.orig
 
 %install
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{etc/X11/wmconfig,usr/src/examples/xforms} \
 	$RPM_BUILD_ROOT{%{_libdir},%{_bindir},%{_includedir},%{_mandir}/man{1,5}}
 
-make install \
+%{__make} install \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	LIB_DIR=$RPM_BUILD_ROOT%{_libdir} \
 	MAN1_DIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
