@@ -1,19 +1,20 @@
 Summary:	Graphical user interface toolkit for X Window Systems
+Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
 Name:		xforms
 Version:	0.89
-Release:	1
+Release:	2
 Copyright:	noncommercial distributable (see Copyright)
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	ftp://einstein.phys.uwm.edu/pub/xforms/linux/elf/bxform-089-glibc2.1.tgz
-Source2:	ftp://einstein.phys.uwm.edu/pub/xforms/linux-alpha/elf/bxform-089-glibc2.1.alpha.tgz
-Source3:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
-Source10:	fdesign.wmconfig
+Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz 
+Source2:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-alpha/bxform-089-glibc2.1-alpha.tgz
+Source3:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-sparc/bxform-089-glibc2.1-sparc.tgz
+Source4:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 Patch0:		bxform-mkconfig.patch
 Patch1:		bxform-config.patch
-Exclusivearch:	%{ix86} alpha
-URL:		http://bragg.phys.uwm.edu/xforms/
+Exclusivearch:	%{ix86} alpha sparc sparc64
+URL:		http://world.std.com/~xforms/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix	/usr/X11R6
@@ -27,18 +28,29 @@ execution model that allows fast and easy construction of
 X-applications. In addition, the library is extensible and new objects
 can easily be created and added to the library.
 
+%description -l pl
+XForms jest zbiorem narzêdzi bazuj±cym na Xlib do tworzenia GUI dla
+Systemów X Windows. Jego zalety to bogata ilo¶æ obiektów takich
+jak przyciski, menu itp. zintegrowane w prosty i efektywny model,
+który pozwala na szybkie i ³atwe tworzenie X-aplikacji.
+
 %package demos
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Summary:	xforms library demo programs
+Summary(pl):	programy demo u¿ywaj±ce biblioteki XForms
 Requires:	%{name} = %{version}
 
 %description demos
 Demos using the XForms library
 
+%description -l pl demos
+Dema u¿ywaj±ce biblioteki XForms
+
 %package devel
 Summary:	xforms - header files and development documentation
+Summary(pl):	Pliki nag³ówkowe i dokumentacja bibliteki XForms.
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
@@ -47,8 +59,12 @@ Requires:	%{name} = %{version}
 %description devel
 Xforms - header files and development documentation.
 
+%description -l pl devel
+Pliki nag³ówkowe i dokumentacja bibliteki XForms.
+	
 %package static
 Summary:	xforms static libraries
+Summary(pl):	Biblioteki statyczne XForms.
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
@@ -57,8 +73,12 @@ Requires:	%{name}-devel = %{version}
 %description static
 Xforms static libraries.
 
+%description -l pl static
+Biblioteki statyczne XForms.
+
 %package -n fdesign
-Summary:	fdesign -  Forms Library User Interface Designer
+Summary:	fdesign - Forms Library User Interface Designer
+Summary(pl):	fdesign - Projektant GUI
 Group:		Development/Building
 Group(pl):	Programowanie/Budowanie
 Requires:	%{name} = %{version}
@@ -74,8 +94,13 @@ executed, the generated code would, at run time (or print time for
 PostScript output), construct the exact same interfaces as those seen
 within fdesign.
 
+%description -l pl -n fdesign
+fdesign to GUI pomagaj±ce stworzyæ graficzny interfejs u¿ytkownika
+za pomoc± edytora WYSIWYG pozwalaj±cego u¿ytkownikowi na bezpo¶rednie
+manipulacje obiektami itp.
+
 %prep
-%ifarch i386 i486 i586 i686
+%ifarch %{ix86}
 %setup -q -T -n xforms -b 0
 %endif
 
@@ -83,10 +108,13 @@ within fdesign.
 %setup -q -T-n xforms -b 2
 %endif
 
-%patch0 -p1
+%ifarch sparc sparc64
+%setup -q -T -n xforms -b 3
+%endif
 
-cp %{SOURCE3} .
+%patch0 -p1
 %patch1 -p1
+install %{SOURCE4} .
 
 %build
 make demo CCFLAG="$RPM_OPT_FLAGS"; make clean
@@ -114,7 +142,6 @@ install mkconfig.h $RPM_BUILD_ROOT/usr/src/examples/xforms
 cp -a DEMOS $RPM_BUILD_ROOT/usr/src/examples/xforms
 install FORMS/glcanvas.c $RPM_BUILD_ROOT/usr/src/examples/xforms
 
-install %{SOURCE10} $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/fdesign
 install DESIGN/fdesign $RPM_BUILD_ROOT%{_bindir}
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
@@ -150,6 +177,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n fdesign
 %defattr(644,root,root,755)
-%{_sysconfdir}/X11/wmconfig/fdesign
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
