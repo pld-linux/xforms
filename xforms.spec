@@ -5,9 +5,10 @@ Version:	0.89
 Release:	2
 Copyright:	noncommercial distributable (see Copyright)
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz 
+Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz
 Source2:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-alpha/bxform-089-glibc2.1-alpha.tgz
 Source3:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-sparc/bxform-089-glibc2.1-sparc.tgz
 Source4:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
@@ -17,8 +18,8 @@ Exclusivearch:	%{ix86} alpha sparc sparc64
 URL:		http://world.std.com/~xforms/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix	/usr/X11R6
-%define		_mandir	%{_prefix}/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 XForms is a GUI toolkit based on Xlib for X Window Systems. It
@@ -30,28 +31,30 @@ can easily be created and added to the library.
 
 %description -l pl
 XForms jest zbiorem narzêdzi bazuj±cym na Xlib do tworzenia GUI dla
-Systemów X Windows. Jego zalety to bogata ilo¶æ obiektów takich
-jak przyciski, menu itp. zintegrowane w prosty i efektywny model,
-który pozwala na szybkie i ³atwe tworzenie X-aplikacji.
+Systemów X Windows. Jego zalety to bogata ilo¶æ obiektów takich jak
+przyciski, menu itp. zintegrowane w prosty i efektywny model, który
+pozwala na szybkie i ³atwe tworzenie X-aplikacji.
 
 %package demos
-Group:		Development/Libraries
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
 Summary:	xforms library demo programs
 Summary(pl):	programy demo u¿ywaj±ce biblioteki XForms
+Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description demos
-Demos using the XForms library
+Demos using the XForms library.
 
 %description -l pl demos
-Dema u¿ywaj±ce biblioteki XForms
+Dema u¿ywaj±ce biblioteki XForms.
 
 %package devel
 Summary:	xforms - header files and development documentation
-Summary(pl):	Pliki nag³ówkowe i dokumentacja bibliteki XForms.
+Summary(pl):	Pliki nag³ówkowe i dokumentacja bibliteki XForms
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -61,11 +64,12 @@ Xforms - header files and development documentation.
 
 %description -l pl devel
 Pliki nag³ówkowe i dokumentacja bibliteki XForms.
-	
+
 %package static
 Summary:	xforms static libraries
-Summary(pl):	Biblioteki statyczne XForms.
+Summary(pl):	Biblioteki statyczne XForms
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -80,6 +84,7 @@ Biblioteki statyczne XForms.
 Summary:	fdesign - Forms Library User Interface Designer
 Summary(pl):	fdesign - Projektant GUI
 Group:		Development/Building
+Group(de):	Entwicklung/Bauen
 Group(pl):	Programowanie/Budowanie
 Requires:	%{name} = %{version}
 
@@ -95,8 +100,8 @@ PostScript output), construct the exact same interfaces as those seen
 within fdesign.
 
 %description -l pl -n fdesign
-fdesign to GUI pomagaj±ce stworzyæ graficzny interfejs u¿ytkownika
-za pomoc± edytora WYSIWYG pozwalaj±cego u¿ytkownikowi na bezpo¶rednie
+fdesign to GUI pomagaj±ce stworzyæ graficzny interfejs u¿ytkownika za
+pomoc± edytora WYSIWYG pozwalaj±cego u¿ytkownikowi na bezpo¶rednie
 manipulacje obiektami itp.
 
 %prep
@@ -117,7 +122,7 @@ manipulacje obiektami itp.
 install %{SOURCE4} .
 
 %build
-make demo CCFLAG="$RPM_OPT_FLAGS"; make clean
+%{__make} demo CCFLAG="%{rpmcflags}"; %{__make} clean
 rm -f DEMOS/*.orig
 
 %install
@@ -125,7 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{etc/X11/wmconfig,usr/src/examples/xforms} \
 	$RPM_BUILD_ROOT{%{_libdir},%{_bindir},%{_includedir},%{_mandir}/man{1,5}}
 
-make install \
+%{__make} install \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	LIB_DIR=$RPM_BUILD_ROOT%{_libdir} \
 	MAN1_DIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
@@ -144,10 +149,7 @@ install FORMS/glcanvas.c $RPM_BUILD_ROOT/usr/src/examples/xforms
 
 install DESIGN/fdesign $RPM_BUILD_ROOT%{_bindir}
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
-
-gzip -9nf FORMS/Readme Bugs Changes Copyright Readme \
-	$RPM_BUILD_ROOT%{_mandir}/man*/*
+gzip -9nf FORMS/Readme Bugs Changes Copyright Readme
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
