@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
 Summary(pt_BR):	Biblioteca de Widgets para o X
 Name:		xforms
 Version:	1.0
-Release:	2
+Release:	3
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/%{name}-%{version}-release.tgz
