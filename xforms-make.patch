@@ -1,0 +1,39 @@
+--- xforms-1.0-release/Imakefile.orig	Tue Dec  3 18:25:43 2002
++++ xforms-1.0-release/Imakefile	Mon Jan 27 20:09:48 2003
+@@ -2,11 +2,11 @@
+ 
+ /* Fairly important stuff */
+ 
+-#define OptimizationLevel -O4
+-#define DoWall NO
++#define OptimizationLevel $(OPTFLAGS)
++#define DoWall YES
+ 
+ #define BuildShared YES
+-#define StaticLink YES
++#define StaticLink NO
+ 
+ #define BuildGL YES
+ 
+@@ -17,9 +17,9 @@
+ #define HaveSnprintf YES
+ #define HaveFloatH YES
+ #define DoOptimize YES
+-#define BuildDemos NO
++#define BuildDemos YES
+ 
+-#define DebugSymbols YES
++#define DebugSymbols NO
+ 
+ 
+ /*  
+@@ -33,7 +33,8 @@
+ /* Out in the Tall Weeds */
+ 
+ #define InstallNonstandard NO
+-#define XFormsNonstandardInstallDir /usr/local
++#define XFormsNonstandardInstallDir /usr/X11R6
++#define XFormsInstallDir /usr/X11R6
+ 
+ #define NonstandardXpm NO
+ 
