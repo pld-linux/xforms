@@ -5,9 +5,10 @@ Version:	0.89
 Release:	3
 License:	noncommercial distributable (see Copyright)
 Group:		X11/Libraries
-Source0:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-i386/elf/bxform-089-glibc2.1-x86.tgz
-Source2:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-alpha/bxform-089-glibc2.1-alpha.tgz
-Source3:	ftp://ncmir.ucsd.edu:/pub/xforms/linux-sparc/bxform-089-glibc2.1-sparc.tgz
+Source0:	bxform-089-glibc2.1-x86.tgz
+Source1:	bxform-089-glibc2.1-alpha.tgz
+Source2:	bxform-089-glibc2.1-sparc.tgz
+Source3:	bxform-089-glibc2.1-ppc.tgz
 Source4:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 Patch0:		bxform-mkconfig.patch
 Patch1:		bxform-config.patch
@@ -98,10 +99,14 @@ manipulacje obiektami itp.
 %endif
 
 %ifarch alpha
-%setup -q -T -n xforms -b 2
+%setup -q -T -n xforms -b 1
 %endif
 
 %ifarch sparc sparc64
+%setup -q -T -n xforms -b 2
+%endif
+
+%ifarch ppc
 %setup -q -T -n xforms -b 3
 %endif
 
