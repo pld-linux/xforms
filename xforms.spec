@@ -7,7 +7,7 @@ Release:	4
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/%{name}-%{version}-release.tgz
-# Source0-md5: aed46678c9278dc68b7e6224661aa1c7
+# Source0-md5:	aed46678c9278dc68b7e6224661aa1c7
 Source1:	ftp://einstein.phys.uwm.edu/pub/xforms/DOC/forms_sngl.ps.gz
 # Source1-md5:	759f8a9f8f9d5ff8751814b44bbe07f6
 Patch0:		%{name}-demo.patch
