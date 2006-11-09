@@ -1,0 +1,3 @@
+- added ppc support
+- had to remove URLs in Sources: because the author developed a really dumb
+  way of distributing files
