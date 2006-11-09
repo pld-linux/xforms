@@ -19,8 +19,8 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 # according to warning in README - old headers may break it
 BuildConflicts:	xforms-devel < 1.0
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libforms1
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -49,7 +49,7 @@ Summary:	XForms - header files and development documentation
 Summary(pl):	Pliki nag³ówkowe i dokumentacja bibliteki XForms
 Summary(pt_BR):	Arquivos de cabeçalho para desenvolvedores XForms
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	XFree86-devel
 Obsoletes:	libforms1-devel
 
@@ -68,7 +68,7 @@ Summary:	XForms static libraries
 Summary(pl):	Biblioteki statyczne XForms
 Summary(pt_BR):	Biblioteca estática para desenvolvedores XForms
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libforms1-static-devel
 
 %description static
@@ -84,7 +84,7 @@ Este pacote contém a versão estática da biblioteca XForms.
 Summary:	XForms GL canvas library
 Summary(pl):	Biblioteka dodaj±ca obs³ugê GL do XForms
 Group:		X11/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL
 
 %description GL
@@ -97,8 +97,8 @@ Biblioteka dodaj±ca obs³ugê GL do XForms.
 Summary:	XForms GL canvas library headers
 Summary(pl):	Nag³ówki biblioteki dodaj±cej obs³ugê GL do XForms
 Group:		X11/Development/Libraries
-Requires:	%{name}-GL = %{version}
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-GL = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 Requires:	OpenGL-devel
 
 %description GL-devel
@@ -111,7 +111,7 @@ Pliki nag³ówkowe biblioteki dodaj±cej obs³ugê GL do XForms.
 Summary:	XForms GL canvas static library
 Summary(pl):	Statyczna biblioteka dodaj±ca obs³ugê GL do XForms
 Group:		X11/Development/Libraries
-Requires:	%{name}-GL-devel = %{version}
+Requires:	%{name}-GL-devel = %{version}-%{release}
 
 %description GL-static
 XForms GL canvas static library.
@@ -123,7 +123,7 @@ Statyczna biblioteka dodaj±ca obs³ugê GL do XForms.
 Summary:	XForms library demo programs
 Summary(pl):	Programy demonstracyjne u¿ywaj±ce biblioteki XForms
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description demos
 Demos using the XForms library.
@@ -135,7 +135,7 @@ Programy demonstracyjne u¿ywaj±ce biblioteki XForms.
 Summary:	fdesign - Forms Library User Interface Designer
 Summary(pl):	fdesign - Projektant GUI
 Group:		X11/Development/Tools
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description -n fdesign
 fdesign is a GUI builder that helps the construction of graphical user
