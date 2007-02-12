@@ -1,6 +1,6 @@
 Summary:	Graphical user interface toolkit for X Window Systems
-Summary(pl):	Narzêdzia do tworzenia GUI dla X Window
-Summary(pt_BR):	Biblioteca de Widgets para o X
+Summary(pl.UTF-8):   NarzÄ™dzia do tworzenia GUI dla X Window
+Summary(pt_BR.UTF-8):   Biblioteca de Widgets para o X
 Name:		xforms
 Version:	1.0
 Release:	4
@@ -35,19 +35,19 @@ execution model that allows fast and easy construction of
 X-applications. In addition, the library is extensible and new objects
 can easily be created and added to the library.
 
-%description -l pl
-XForms jest zbiorem narzêdzi bazuj±cym na Xlib do tworzenia GUI dla
-Systemów X Window. Jego zalety to bogata ilo¶æ obiektów takich jak
-przyciski, menu itp. zintegrowane w prosty i efektywny model, który
-pozwala na szybkie i ³atwe tworzenie X-aplikacji.
+%description -l pl.UTF-8
+XForms jest zbiorem narzÄ™dzi bazujÄ…cym na Xlib do tworzenia GUI dla
+SystemÃ³w X Window. Jego zalety to bogata iloÅ›Ä‡ obiektÃ³w takich jak
+przyciski, menu itp. zintegrowane w prosty i efektywny model, ktÃ³ry
+pozwala na szybkie i Å‚atwe tworzenie X-aplikacji.
 
-%description -l pt_BR
-XForms é uma biblioteca de widgets para o X.
+%description -l pt_BR.UTF-8
+XForms Ã© uma biblioteca de widgets para o X.
 
 %package devel
 Summary:	XForms - header files and development documentation
-Summary(pl):	Pliki nag³ówkowe i dokumentacja bibliteki XForms
-Summary(pt_BR):	Arquivos de cabeçalho para desenvolvedores XForms
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja bibliteki XForms
+Summary(pt_BR.UTF-8):   Arquivos de cabeÃ§alho para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	XFree86-devel
@@ -56,17 +56,17 @@ Obsoletes:	libforms1-devel
 %description devel
 XForms - header files and development documentation.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja bibliteki XForms.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja bibliteki XForms.
 
-%description devel -l pt_BR
-Este pacote contém arquivos de cabeçalho e ferramentas para
+%description devel -l pt_BR.UTF-8
+Este pacote contÃ©m arquivos de cabeÃ§alho e ferramentas para
 desenvolvedores XForms.
 
 %package static
 Summary:	XForms static libraries
-Summary(pl):	Biblioteki statyczne XForms
-Summary(pt_BR):	Biblioteca estática para desenvolvedores XForms
+Summary(pl.UTF-8):   Biblioteki statyczne XForms
+Summary(pt_BR.UTF-8):   Biblioteca estÃ¡tica para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libforms1-static-devel
@@ -74,15 +74,15 @@ Obsoletes:	libforms1-static-devel
 %description static
 XForms static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne XForms.
 
-%description static -l pt_BR
-Este pacote contém a versão estática da biblioteca XForms.
+%description static -l pt_BR.UTF-8
+Este pacote contÃ©m a versÃ£o estÃ¡tica da biblioteca XForms.
 
 %package GL
 Summary:	XForms GL canvas library
-Summary(pl):	Biblioteka dodaj±ca obs³ugê GL do XForms
+Summary(pl.UTF-8):   Biblioteka dodajÄ…ca obsÅ‚ugÄ™ GL do XForms
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL
@@ -90,12 +90,12 @@ Requires:	OpenGL
 %description GL
 XForms GL canvas library.
 
-%description GL -l pl
-Biblioteka dodaj±ca obs³ugê GL do XForms.
+%description GL -l pl.UTF-8
+Biblioteka dodajÄ…ca obsÅ‚ugÄ™ GL do XForms.
 
 %package GL-devel
 Summary:	XForms GL canvas library headers
-Summary(pl):	Nag³ówki biblioteki dodaj±cej obs³ugê GL do XForms
+Summary(pl.UTF-8):   NagÅ‚Ã³wki biblioteki dodajÄ…cej obsÅ‚ugÄ™ GL do XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-GL = %{version}-%{release}
 Requires:	%{name}-devel = %{version}-%{release}
@@ -104,36 +104,36 @@ Requires:	OpenGL-devel
 %description GL-devel
 XForms GL canvas library header files.
 
-%description GL-devel -l pl
-Pliki nag³ówkowe biblioteki dodaj±cej obs³ugê GL do XForms.
+%description GL-devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki dodajÄ…cej obsÅ‚ugÄ™ GL do XForms.
 
 %package GL-static
 Summary:	XForms GL canvas static library
-Summary(pl):	Statyczna biblioteka dodaj±ca obs³ugê GL do XForms
+Summary(pl.UTF-8):   Statyczna biblioteka dodajÄ…ca obsÅ‚ugÄ™ GL do XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-GL-devel = %{version}-%{release}
 
 %description GL-static
 XForms GL canvas static library.
 
-%description GL-static -l pl
-Statyczna biblioteka dodaj±ca obs³ugê GL do XForms.
+%description GL-static -l pl.UTF-8
+Statyczna biblioteka dodajÄ…ca obsÅ‚ugÄ™ GL do XForms.
 
 %package demos
 Summary:	XForms library demo programs
-Summary(pl):	Programy demonstracyjne u¿ywaj±ce biblioteki XForms
+Summary(pl.UTF-8):   Programy demonstracyjne uÅ¼ywajÄ…ce biblioteki XForms
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description demos
 Demos using the XForms library.
 
-%description demos -l pl
-Programy demonstracyjne u¿ywaj±ce biblioteki XForms.
+%description demos -l pl.UTF-8
+Programy demonstracyjne uÅ¼ywajÄ…ce biblioteki XForms.
 
 %package -n fdesign
 Summary:	fdesign - Forms Library User Interface Designer
-Summary(pl):	fdesign - Projektant GUI
+Summary(pl.UTF-8):   fdesign - Projektant GUI
 Group:		X11/Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
@@ -148,15 +148,15 @@ executed, the generated code would, at run time (or print time for
 PostScript output), construct the exact same interfaces as those seen
 within fdesign.
 
-%description -n fdesign -l pl
-fdesign to GUI pomagaj±ce stworzyæ graficzny interfejs u¿ytkownika za
-pomoc± edytora WYSIWYG pozwalaj±cego u¿ytkownikowi na bezpo¶rednie
-manipulowanie ró¿nymi obiektami, takimi jak przyciski, suwaki, menu
-itp. Po skonstruowaniu odpowiadaj±cego UI u¿ytkownik mo¿e zapisaæ
-zaprojektowany interfejs do zewnêtrznego pliku zawieraj±cego czê¶æ
-kodu programu. Po skompilowaniu i skonsolidowaniu z bibliotek± XForms,
-uruchomiony program utworzy (lub wydrukuje w przypadku wyj¶cia do
-PostScriptu) dok³adnie ten sam interfejs, który by³ widoczny w
+%description -n fdesign -l pl.UTF-8
+fdesign to GUI pomagajÄ…ce stworzyÄ‡ graficzny interfejs uÅ¼ytkownika za
+pomocÄ… edytora WYSIWYG pozwalajÄ…cego uÅ¼ytkownikowi na bezpoÅ›rednie
+manipulowanie rÃ³Å¼nymi obiektami, takimi jak przyciski, suwaki, menu
+itp. Po skonstruowaniu odpowiadajÄ…cego UI uÅ¼ytkownik moÅ¼e zapisaÄ‡
+zaprojektowany interfejs do zewnÄ™trznego pliku zawierajÄ…cego czÄ™Å›Ä‡
+kodu programu. Po skompilowaniu i skonsolidowaniu z bibliotekÄ… XForms,
+uruchomiony program utworzy (lub wydrukuje w przypadku wyjÅ›cia do
+PostScriptu) dokÅ‚adnie ten sam interfejs, ktÃ³ry byÅ‚ widoczny w
 fdesign.
 
 %prep
