@@ -1,6 +1,6 @@
 Summary:	Graphical user interface toolkit for X Window Systems
-Summary(pl.UTF-8):   Narzędzia do tworzenia GUI dla X Window
-Summary(pt_BR.UTF-8):   Biblioteca de Widgets para o X
+Summary(pl.UTF-8):	Narzędzia do tworzenia GUI dla X Window
+Summary(pt_BR.UTF-8):	Biblioteca de Widgets para o X
 Name:		xforms
 Version:	1.0
 Release:	4
@@ -46,8 +46,8 @@ XForms é uma biblioteca de widgets para o X.
 
 %package devel
 Summary:	XForms - header files and development documentation
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja bibliteki XForms
-Summary(pt_BR.UTF-8):   Arquivos de cabeçalho para desenvolvedores XForms
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja bibliteki XForms
+Summary(pt_BR.UTF-8):	Arquivos de cabeçalho para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	XFree86-devel
@@ -65,8 +65,8 @@ desenvolvedores XForms.
 
 %package static
 Summary:	XForms static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne XForms
-Summary(pt_BR.UTF-8):   Biblioteca estática para desenvolvedores XForms
+Summary(pl.UTF-8):	Biblioteki statyczne XForms
+Summary(pt_BR.UTF-8):	Biblioteca estática para desenvolvedores XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libforms1-static-devel
@@ -82,7 +82,7 @@ Este pacote contém a versão estática da biblioteca XForms.
 
 %package GL
 Summary:	XForms GL canvas library
-Summary(pl.UTF-8):   Biblioteka dodająca obsługę GL do XForms
+Summary(pl.UTF-8):	Biblioteka dodająca obsługę GL do XForms
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL
@@ -95,7 +95,7 @@ Biblioteka dodająca obsługę GL do XForms.
 
 %package GL-devel
 Summary:	XForms GL canvas library headers
-Summary(pl.UTF-8):   Nagłówki biblioteki dodającej obsługę GL do XForms
+Summary(pl.UTF-8):	Nagłówki biblioteki dodającej obsługę GL do XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-GL = %{version}-%{release}
 Requires:	%{name}-devel = %{version}-%{release}
@@ -109,7 +109,7 @@ Pliki nagłówkowe biblioteki dodającej obsługę GL do XForms.
 
 %package GL-static
 Summary:	XForms GL canvas static library
-Summary(pl.UTF-8):   Statyczna biblioteka dodająca obsługę GL do XForms
+Summary(pl.UTF-8):	Statyczna biblioteka dodająca obsługę GL do XForms
 Group:		X11/Development/Libraries
 Requires:	%{name}-GL-devel = %{version}-%{release}
 
@@ -121,7 +121,7 @@ Statyczna biblioteka dodająca obsługę GL do XForms.
 
 %package demos
 Summary:	XForms library demo programs
-Summary(pl.UTF-8):   Programy demonstracyjne używające biblioteki XForms
+Summary(pl.UTF-8):	Programy demonstracyjne używające biblioteki XForms
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -133,7 +133,7 @@ Programy demonstracyjne używające biblioteki XForms.
 
 %package -n fdesign
 Summary:	fdesign - Forms Library User Interface Designer
-Summary(pl.UTF-8):   fdesign - Projektant GUI
+Summary(pl.UTF-8):	fdesign - Projektant GUI
 Group:		X11/Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
